@@ -1,0 +1,120 @@
+
+module.exports = {
+  mode: "jit",
+  purge: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  media: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      animation: {
+        'fade-in': 'fade-in 0.5s linear forwards',
+        marquee: 'marquee var(--marquee-duration) linear infinite',
+        'spin-slow': 'spin 4s linear infinite',
+        'spin-slower': 'spin 6s linear infinite',
+        'spin-reverse': 'spin-reverse 1s linear infinite',
+        'spin-reverse-slow': 'spin-reverse 4s linear infinite',
+        'spin-reverse-slower': 'spin-reverse 6s linear infinite',
+      },
+      keyframes: {
+        'fade-in': {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        marquee: {
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
+        'spin-reverse': {
+          to: {
+            transform: 'rotate(-360deg)',
+          },
+        },
+      },
+      spacing: {
+        120: "30rem",
+        144: "36rem",
+        192: "48rem",
+      },
+      colors: {
+        "amarillo": "#DEB457",
+        "gris": "#EAE9E5",
+        "negro": "#000000",
+      }
+    },
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "992px",
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "1680px",
+      "4xl": "1920px",
+      "5xl": "2048px",
+      "6xl": "2160px",
+      "7xl": "2560px",
+    },
+    fontSize: {
+      xs: ".75rem",
+      sm: ".875rem",
+      tiny: ".875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.36rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2rem",
+      "5xl": "2.125rem",
+      "6xl": "2.25rem",
+      "7xl": "2.36rem",
+      "8xl": "2.5rem",
+      "9xl": "2.875rem",
+      "10xl": "3rem",
+      "11xl": "3.125rem",
+      "12xl": "3.36rem",
+      "13xl": "3.5rem",
+      "14xl": "3.125rem",
+      "15xl": "3.36rem",
+      "16xl": "3.5rem",
+      "17xl": "3.875rem",
+      "18xl": "4rem",
+      "19xl": "4.125rem",
+      "20xl": "4.36rem",
+      "21xl": "4.5rem",
+      "22xl": "4.875rem",
+      "23xl": "5rem",
+      "24xl": "5.125rem",
+      "25xl": "5.36rem",
+      "26xl": "5.5rem",
+      "27xl": "5.625rem",
+      "28xl": "5.875rem",
+      "29xl": "6.125rem",
+      "30xl": "6.36rem",
+      "31xl": "6.5rem",
+      "32xl": "6.625rem",
+      "33xl": "7rem",
+      "34xl": "7.125rem",
+      "35xl": "7.36rem",
+      "36xl": "7.5rem",
+      "37xl": "7.625rem",
+      "38xl": "7.875rem",
+      "39xl": "8rem",
+      "40xl": "8.125rem",
+      "41xl": "8.36rem",
+      "42xl": "8.5rem",
+      "43xl": "8.625rem",
+      "44xl": "30vw",
+      "45xl": "40vw",
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    
+  ],
+};

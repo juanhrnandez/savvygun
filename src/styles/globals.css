@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Language: css */
+
+html{
+    cursor: url("/puntero_grises_azulados.svg"), url("/puntero_grises_azulados.svg"), pointer;
+ }
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.hideScroll::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
