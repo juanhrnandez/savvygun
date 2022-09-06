@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import { useId } from "react";
+import { ArrowRightIcon } from "@heroicons/react/outline";
+import Typewriter from "typewriter-effect";
+
+import EmblaCarousel from "@/components/EmblaCarousel";
 import Image from "next/future/image";
-
-import { useEffect } from "react";
-
 function BackgroundIllustration(props) {
   let id = useId();
 
@@ -74,96 +75,81 @@ function BackgroundIllustration(props) {
         </defs>
       </svg>
       <div className="relative">
-        <p className="absolute top-[17rem] right-1/2">+</p>
+        <div className="absolute top-[5.5rem] left-[5.4rem]">
+          <Image
+            className="rounded-full w-96 h-96"
+            src="/images/marketing-y-estrategias-digitales-en-puebla-6.jpg"
+            width="500"
+            height="500"
+          />
+        </div>
       </div>
     </div>
   );
 }
 
+const Slides = [
+  {
+    img: "/images/marketing-y-estrategias-digitales-en-puebla-6.jpg",
+    alt: "",
+    title: "",
+  },
+  {
+    img: "/images/marketing-y-estrategias-digitales-en-puebla-6.jpg",
+    alt: "",
+    title: "",
+  },
+  {
+    img: "/images/marketing-y-estrategias-digitales-en-puebla-6.jpg",
+    alt: "",
+    title: "",
+  },
+];
+
 export default function Hero() {
-  useEffect(() => {
-    const slider = document.querySelector(".hideScroll");
-    let mouseDown = false;
-    let startX, scrollLeft;
-
-    let startDragging = function (e) {
-      mouseDown = true;
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    };
-    let stopDragging = function (event) {
-      mouseDown = false;
-    };
-
-    slider.addEventListener("mousemove", (e) => {
-      e.preventDefault();
-      if (!mouseDown) {
-        return;
-      }
-      const x = e.pageX - slider.offsetLeft;
-      const scroll = x - startX;
-      slider.scrollLeft = scrollLeft - scroll;
-    });
-
-    // Add the event listeners
-    slider.addEventListener("mousedown", startDragging, false);
-    slider.addEventListener("mouseup", stopDragging, false);
-    slider.addEventListener("mouseleave", stopDragging, false);
-  }, []);
-
   return (
-    <header className="w-11/12 mx-auto relative">
-      <Navbar />
-      <article className="w-11/12 mx-auto overflow-hidden">
-        <h1 className="text-36xl font-bold text-negro leading-[7rem] mt-20 ">
-          Shooting to <br />
-          <span className="text-amarillo ">Success</span>
-        </h1>
-        <div>
-          <BackgroundIllustration className="absolute w-[35rem] h-[35rem] top-44 right-20 " />
-        </div>
+    <header className="pt-20 lg:pt-0 bg-gradient-to-b from-gris to-white dark:from-neutral-700 dark:to-negro dark:
+     dark:text-white">
+      <div className="w-11/12 mx-auto relative">
+        <Navbar />
+        <article className="lg:w-11/12 mx-auto overflow-hidden">
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute animate-pulse" />
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute left-[50rem] top-80 animate-pulse" />
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute right-[30rem] top-20 animate-pulse" />
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute left-[70rem] bottom-16 animate-pulse" />
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute right-[3rem] bottom-80 animate-pulse" />
+          <div className="w-10 h-10 bg-amarillo rounded-full absolute -left-[2rem] bottom-40 animate-pulse" />
 
-        <div class=" w-4/12 mt-20 scroll- relative overflow-hidden ">
-          <div class="relative overflow-auto ">
-            <div class="relative">
-              <div class="relative w-full flex gap-6  overflow-x-auto pb-14 hideScroll px-5">
-                <div class=" shrink-0">
-                  <div className="flex justify-end mb-2">
-                    <button className="text-white font-medium p-2 bg-amarillo">
-                      Conocer más
-                    </button>
-                  </div>
-                  <Image
-                    src="/images/marketing-y-estrategias-digitales-en-puebla-6.jpg"
-                    width="500"
-                    height="500"
-                    className="pointer-events-none"
-                  />
-                  <p className="mt-3 text-lg font-medium">
-                    Proident cupidatat duis velit consequat ex veniam in.
-                  </p>
-                </div>
-                <div class=" shrink-0">
-                  <div className="flex justify-end mb-2">
-                    <button className="text-white font-medium p-2 bg-amarillo">
-                      Conocer más
-                    </button>
-                  </div>
-                  <Image
-                    src="/images/marketing-y-estrategias-digitales-en-puebla-6.jpg"
-                    width="500"
-                    height="500"
-                    className="pointer-events-none"
-                  />
-                  <p className="mt-3 text-lg font-medium">
-                    Proident cupidatat duis velit consequat ex veniam in.
-                  </p>
-                </div>
-              </div>
+          <div className="flex items-end gap-x-10">
+            <h1 className="text-20xl lg:text-36xl font-bold text-negro dark:text-white leading-[4rem] lg:leading-[7rem] lg:mt-20 lg:relative">
+              Shooting to <br className="hidden lg:block" />
+              <span className="text-amarillo ">Success</span>
+            </h1>
+          </div>
+          <div>
+            <BackgroundIllustration className="absolute w-[35rem] h-[35rem] top-44 right-20 opacity-40 lg:opacity-100" />
+          </div>
+          <div class="lg:w-[36%] mt-10 ">
+            <EmblaCarousel slides={Slides} />
+          </div>
+          <div className="lg:flex justify-end mt-10 lg:-mt-20">
+            <div className="text-4xl lg:text-8xl flex items-center lg:gap-x-8">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Enfocamos el objetivo",
+                    "Apuntamos a la solución",
+                    " Disparamos al éxito"
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+              <ArrowRightIcon className="w-14 h-14 text-amarillo" />{" "}
             </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </header>
   );
 }

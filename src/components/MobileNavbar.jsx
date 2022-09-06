@@ -16,15 +16,15 @@ export default function MobileNavbar() {
           clsx(
             isOpen
               ? "bg-negro fixed top-0 w-full"
-              : "h-16 bg-negro fixed top-0 w-full"
+              : "h-16 bg-amarillo fixed top-0 w-full"
           )
         }
         style={{ zIndex: "998" }}
       >
         <div className=" flex items-center justify-between w-11/12 mx-auto h-16">
-          <p className="font-bold text-white">Juan Hernández</p>
+          <img src="logo.svg" className="w-16"/>
           <MenuIcon
-            className="text-red-600 w-10 h-10"
+            className="text-negro w-10 h-10"
             onClick={(e) => setIsOpen(true)}
           />
         </div>
@@ -33,7 +33,7 @@ export default function MobileNavbar() {
         {isOpen ? (
           <motion.div
             className={
-              " w-full bg-negro relative  min-h-screen"
+              " w-full bg-amarillo relative  min-h-screen"
             }
             initial={{ opacity: 0, y:-350, duration: 1 }}
             animate={{ opacity: 1, y: 0 }}

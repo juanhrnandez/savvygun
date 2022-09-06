@@ -7,7 +7,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="lg:flex justify-between items-center hidden">
       <img src="/logo.svg" alt="logo" className="w-24 h-24" />
       <ul className="flex gap-x-16 text-2xl items-center">
         {navigation.map((item) => (
