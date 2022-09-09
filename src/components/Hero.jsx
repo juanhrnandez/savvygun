@@ -75,10 +75,10 @@ function BackgroundIllustration(props) {
         </defs>
       </svg>
       <div className="relative">
-        <div className="absolute top-[5.5rem] left-[5.4rem]">
+        <div className="absolute top-[1.5rem] left-[1.4rem] ">
           <Image
-            className="rounded-full w-96 h-96"
-            src="/images/marketing-y-estrategias-digitales-en-puebla-6.jpg"
+            className="rounded-full object-cover"
+            src="/logo.svg"
             width="500"
             height="500"
           />
@@ -108,8 +108,7 @@ const Slides = [
 
 export default function Hero() {
   return (
-    <header className="pt-20 lg:pt-0 bg-gradient-to-b from-gris to-white dark:from-neutral-700 dark:to-negro dark:
-     dark:text-white">
+    <header className="pt-20 lg:pt-0 bg-gradient-to-b from-gris to-white dark:from-neutral-700 dark:to-negro dark:dark:text-white">
       <div className="w-11/12 mx-auto relative">
         <Navbar />
         <article className="lg:w-11/12 mx-auto overflow-hidden">
