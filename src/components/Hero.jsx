@@ -128,7 +128,7 @@ export default function Hero() {
           <div>
             <BackgroundIllustration className="absolute w-[35rem] h-[35rem] top-44 right-20 opacity-40 lg:opacity-100" />
           </div>
-          <div class="lg:w-[36%] mt-10 ">
+          <div className="lg:w-[36%] mt-10 ">
             <EmblaCarousel slides={Slides} />
           </div>
           <div className="lg:flex justify-end mt-10 lg:-mt-20">
